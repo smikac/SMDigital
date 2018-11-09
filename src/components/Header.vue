@@ -1,19 +1,17 @@
 <template>
     <div>
-        <h1>Header title</h1>
-
         <nav class="navbar" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
                 <img src="../images/SMDigital_Logo.png" height="50">
 
-                <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <a role="button" v-bind:class="[isActive ? 'is-active' : '']" @click="toggleClass()" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
                 </a>
             </div>
 
-            <div id="navbarBasicExample" class="navbar-menu">
+            <div id="navbarBasicExample" v-bind:class="[isActive ? 'is-active' : '']" class="navbar-menu" >
             <div class="navbar-start">
                 <router-link class="navbar-item" to="/">Home</router-link>
                 <router-link class="navbar-item" to="/Contact">Contact</router-link>
@@ -46,6 +44,7 @@ export default {
     data () {
         return {
             title: 'NM Logo!',
+            isActive: false,
             mainMenu: [
                 {
                     text: "Home",
@@ -60,7 +59,16 @@ export default {
             ],            
         }
     },
-
+    methods: {
+        toggleClass: function(event){
+            // Check value
+            if(this.isActive){
+            this.isActive = false;
+            }else{
+            this.isActive = true;
+            }    
+        }
+    }
 }
 </script>
 
