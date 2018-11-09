@@ -15,7 +15,7 @@ export default {
 <style>
 footer{
     background-color: lightblue;
-    padding: 10px;
+    padding: 20px;
 }
 h1{
     color:#222;
