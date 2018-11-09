@@ -1,5 +1,8 @@
 <template>
+    <div>
         <h1>{{title}}</h1>
+        <p>test text!!!</p>
+    </div>            
 </template>
 
 <script>

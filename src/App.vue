@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <router-view></router-view>
     <header-app></header-app>
-    <component v-bind:is="component"></component>
+    <router-view></router-view>    
+    <!-- <component v-bind:is="component"></component> -->
     <foote-app></foote-app>
   </div>
 </template>

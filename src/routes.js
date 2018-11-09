@@ -3,5 +3,5 @@ import Contact from './components/Contact.vue';
 
 export default[
     { path: '/', component: Home },
-    { path: '/Contac', component: Contact }
+    { path: '/Contact', component: Contact }
 ]

@@ -1,5 +1,24 @@
 <template>
+    <div>
         <h1>{{title}}</h1>
+        <div class="columns is-mobile">
+            <div class="column">
+                <div class="notification is-primary has-text-centered">
+                    <p class="title">1</p>
+                </div>
+            </div>
+            <div class="column">
+                <div class="notification is-primary has-text-centered">
+                    <p class="title">2</p>
+                </div>
+            </div>
+            <div class="column">
+                <div class="notification is-primary has-text-centered">
+                    <p class="title">3</p>
+                </div>
+            </div>
+        </div>    
+    </div>    
 </template>
 
 <script>

@@ -1,10 +1,13 @@
 <template>
-    <nav>
-        <ul>
-            <li><router-link to="/">Home</router-link></li>
-            <li><router-link to="/Contact">Contact</router-link></li>       
-        </ul>
-    </nav>
+    <div>
+        <h1>Header title</h1>
+        <nav>
+            <ul>
+                <li><router-link to="/">Home</router-link></li>
+                <li><router-link to="/Contact">Contact</router-link></li>       
+            </ul>
+        </nav>
+    </div>
 </template>
 
 <script>
