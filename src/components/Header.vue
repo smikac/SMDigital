@@ -1,36 +1,26 @@
 <template>
     <div>
-        <nav class="navbar" role="navigation" aria-label="main navigation">
-            <div class="navbar-brand">
-                <img src="../images/SMDigital_Logo.png" height="50">
-
-                <a role="button" v-bind:class="[isActive ? 'is-active' : '']" @click="toggleClass()" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                </a>
-            </div>
-
-            <div id="navbarBasicExample" v-bind:class="[isActive ? 'is-active' : '']" class="navbar-menu" >
-            <div class="navbar-start">
-                <router-link class="navbar-item" to="/">Home</router-link>
-                <router-link class="navbar-item" to="/Contact">Contact</router-link>
-            </div>
-
-            <div class="navbar-end">
-                <div class="navbar-item">
-                    <div class="buttons">
-                    <a class="button is-primary">
-                        <strong>Sign up</strong>
-                    </a>
-                    <a class="button is-light">
-                        Log in
-                    </a>
+        <section>
+            <nav class="navbar">
+                <div class="navbar-brand">
+                    <router-link class="navbar-item" to="/">
+                        <img src="../images/SMDigital_Logo.png" width="112" height="28">
+                    </router-link>
+                    <a role="button" v-bind:class="[isActive ? 'is-active' : '']" @click="toggleClass()" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>   
+                </div>    
+                <div v-bind:class="[isActive ? 'is-active' : '']" class="navbar-menu">
+                    <div class="navbar-end basic-menu">
+                        <router-link class="navbar-item" to="/">Home</router-link>
+                        <router-link class="navbar-item" to="/Contact">Contact</router-link>
                     </div>
                 </div>
-            </div>
-        </div>
-        </nav>
+ 
+            </nav>
+        </section>        
     </div>
 </template>
 
@@ -72,21 +62,48 @@ export default {
 }
 </script>
 
-<style>
-header{
-    background-color: green;
-    padding: 10px;
-}
-h1{
-    color:#222;
-    text-align: center;
-}
+<style lang="scss">
+.basic-menu {
+    a{
+        margin-left: 30px;
+        position: relative;
+        transition: all 0.3s ease 0s;
+        color: #232332;
+        display: inline-block;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        position: relative;
+        text-transform: uppercase;    
+        padding: 30px 0;
+        
+        &:hover{
+            color: #999;
+            background-color: #fff;
 
-.background-image{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: -1;    
+            &::before{opacity:1;width:15px;}
+        }
+        &:last-child{
+            margin-right: 3rem;
+        }
+    }
+    > a:last-child:after{
+        display:none
+    }
+    > a{
+        &::before{
+            background: #666666 none repeat scroll 0 0;
+            bottom: 23px;
+            content: "";
+            height: 1px;
+            left: 0;
+            margin: auto;
+            opacity: 0;
+            position: absolute;
+            right: 0;
+            transition: all 0.3s ease 0s;
+            width: 0px;
+        }
+    }
 }
 </style>

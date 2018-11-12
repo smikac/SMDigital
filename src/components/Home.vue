@@ -1,24 +1,18 @@
 <template>
     <div>
-        <h1>{{title}}</h1>
-        <div class="columns is-mobile">
-            <div class="column">
-                <div class="notification is-primary has-text-centered">
-                    <p class="title">1</p>
+        <section class="hero is-info is-fullheight">
+            <div class="hero-body">
+                <div class="container has-text-centered">
+                    <div class="column is-12">
+                        <h2>Hello, I am Freelancer</h2>
+                        <p>
+                            $this is the best software platform for running an internet business. We handle billions of dollars every year for forward-thinking businesses around the world.
+                        </p>
+                    </div>
                 </div>
             </div>
-            <div class="column">
-                <div class="notification is-primary has-text-centered">
-                    <p class="title">2</p>
-                </div>
-            </div>
-            <div class="column">
-                <div class="notification is-primary has-text-centered">
-                    <p class="title">3</p>
-                </div>
-            </div>
-        </div>    
-    </div>    
+        </section>  
+    </div>
 </template>
 
 <script>
@@ -31,13 +25,34 @@ export default {
 }
 </script>
 
-<style>
-footer{
-    background-color: lightblue;
-    padding: 20px;
+<style scoped>
+.hero{
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(https://unsplash.it/1200/900?random) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;    
 }
-h1{
-    color:#222;
-    text-align: center;
+
+h2{
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin: 0;
+    margin-bottom: 20px;
+
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    font-style: normal;
+    line-height: 1.2;    
+}
+
+p{
+    color: #fff;
+    margin: 0;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    font-weight: normal;
+    line-height: 26px;    
 }
 </style>

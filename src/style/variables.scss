@@ -1,0 +1,11 @@
+//Variables
+$background-color: #ddd;
+$sectionHeading: 24px;
+
+body{
+    background-color: $background-color;
+}
+
+section h1{
+    font-size: $sectionHeading;
+}
