@@ -4,7 +4,8 @@
             <div class="hero-body">
                 <div class="container has-text-centered">
                     <div class="column is-12">
-                        <h2>Hello, I am Freelancer</h2>
+                        <img src="../images/SMDigital_Logo.png">
+                        <h2>Hello, I am Softvare Developer</h2>
                         <p>
                             $this is the best software platform for running an internet business. We handle billions of dollars every year for forward-thinking businesses around the world.
                         </p>

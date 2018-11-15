@@ -3,9 +3,6 @@
         <section>
             <nav class="navbar">
                 <div class="navbar-brand">
-                    <router-link class="navbar-item" to="/">
-                        <img src="../images/SMDigital_Logo.png" width="112" height="28">
-                    </router-link>
                     <a role="button" v-bind:class="[isActive ? 'is-active' : '']" @click="toggleClass()" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
                         <span aria-hidden="true"></span>
                         <span aria-hidden="true"></span>
@@ -63,20 +60,19 @@ export default {
 </script>
 
 <style lang="scss">
+$menu-item-color: green;
 .basic-menu {
     a{
-        margin-left: 30px;
         position: relative;
         transition: all 0.3s ease 0s;
         color: #232332;
-        display: inline-block;
-        font-size: 12px;
+        font-size: 1rem;
         font-weight: 600;
         letter-spacing: 1px;
         position: relative;
         text-transform: uppercase;    
         padding: 30px 0;
-        
+        margin-right: 2rem;
         &:hover{
             color: #999;
             background-color: #fff;
@@ -103,6 +99,22 @@ export default {
             right: 0;
             transition: all 0.3s ease 0s;
             width: 0px;
+        }
+    }
+}
+@media only screen and (max-width: 1087px) {
+    .navbar-menu{
+        padding:0;
+        .basic-menu {
+            a{
+                width: 100%;
+                border-bottom: #f1f1f1 1px solid;
+                padding: 1rem;
+
+                &:before{
+                    display: none;
+                }
+            }
         }
     }
 }
