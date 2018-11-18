@@ -60,24 +60,29 @@ export default {
 </script>
 
 <style lang="scss">
-$menu-item-color: green;
 .basic-menu {
     a{
         position: relative;
         transition: all 0.3s ease 0s;
         color: #232332;
-        font-size: 1rem;
+        font-size: 1.2rem;
         font-weight: 600;
         letter-spacing: 1px;
         position: relative;
         text-transform: uppercase;    
         padding: 30px 0;
         margin-right: 2rem;
+        
+        &:hover, &.router-link-exact-active{
+            background-color: #fff;
+            &::before{
+                opacity:1;
+                width:15px;
+            }
+        }
+
         &:hover{
             color: #999;
-            background-color: #fff;
-
-            &::before{opacity:1;width:15px;}
         }
         &:last-child{
             margin-right: 3rem;

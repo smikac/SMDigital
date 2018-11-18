@@ -13,6 +13,7 @@
     "bulma": "^0.7.2",
     "jquery": "^3.3.1",
     "vue": "^2.5.11",
+    "vue-instagram": "^2.0.1",
     "vue-jquery": "^1.0.6",
     "vue-router": "^3.0.1"
   },

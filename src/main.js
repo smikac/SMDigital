@@ -2,10 +2,10 @@ import Vue from 'vue'
 import App from './App.vue'
 import VueRouter from 'vue-router'
 import './../node_modules/bulma/css/bulma.css'
+import './../style/main.css'
 import Routes from './routes'
 
 Vue.use(VueRouter);
-
 
 const router = new VueRouter({
   mode: 'history',
