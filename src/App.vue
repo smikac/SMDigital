@@ -3,7 +3,7 @@
     <header-app></header-app>
     <router-view></router-view>    
     <!-- <component v-bind:is="component"></component> -->
-    <foote-app></foote-app>
+    <footer-app></footer-app>
   </div>
 </template>
 
@@ -18,7 +18,7 @@ import Home from './components/Home.vue';
 export default {
   components:{
     'header-app':Header,
-    'foote-app':Footer,
+    'footer-app':Footer,
     'home': Home    
   },
   data () {
